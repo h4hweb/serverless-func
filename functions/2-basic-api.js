@@ -5,6 +5,9 @@ const items = require('../assets/data')
 
 exports.handler = async (event, context) => {
   return {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
     statusCode: 200,
     // body: 'hey, this is h4hspcc API',
     body: JSON.stringify(items),
